@@ -7,7 +7,7 @@ interface ISeo {
 function SEO({ title }: ISeo) {
   return (
     <Head>
-      <title>{title}</title>
+      <title>{`Let's play! with ${title}`}</title>
     </Head>
   );
 }
