@@ -1,6 +1,6 @@
 import { atom } from "recoil";
 
-export const ex = atom({
+export const nowMovieTab = atom({
   key: "atom",
-  default: 0,
+  default: "popular",
 });

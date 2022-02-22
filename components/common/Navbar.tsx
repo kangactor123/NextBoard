@@ -4,8 +4,9 @@ import styled, { keyframes } from "styled-components";
 
 const Wrapper = styled.nav`
   padding: 10px;
-  width: 100vw;
+  max-width: 660px;
   height: 80px;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: flex-end;
