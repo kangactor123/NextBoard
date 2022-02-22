@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { IGetMovie } from "../../interface";
 import { getMovie } from "../../pages/api/movieApi";
 import { nowMovieTab } from "../../recoil/store";
-import ContentCard from "../common/ContentCard";
+import MovieCard from "./MovieCard";
 
 const Wrapper = styled.div`
   display: grid;
@@ -21,29 +21,9 @@ function MovieList() {
   return (
     <Wrapper>
       {data?.results.map((movie) => (
-        <ContentCard key={movie.id} data={movie}></ContentCard>
+        <MovieCard key={movie.id} data={movie} />
       ))}
     </Wrapper>
   );
 }
-
-export async function getServerSideProps() {
-  const queryClient = new QueryClient();
-  await queryClient.prefetchQuery("popularMovie", () => {
-    getMovie("popular");
-  });
-  return {
-    props: {
-      dehydratedState: dehydrate(queryClient),
-    },
-  };
-}
-
 export default MovieList;
-
-/*
-
-
-
-
-*/

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { IMovie } from "../../interface";
+import { ITv } from "../../interface";
 import { makeImagePath } from "../../utils/util";
 
 const Wrapper = styled.div`
@@ -37,16 +37,16 @@ const TitleWrap = styled.div`
   color: ${(props) => props.theme.white.lighter};
 `;
 
-interface ContentCardProps {
-  data: IMovie;
+interface TvCardProps {
+  data: ITv;
 }
 
-function ContentCard({ data }: ContentCardProps) {
+function TvCard({ data }: TvCardProps) {
   return (
     <Wrapper>
       <ImgWrap img_path={makeImagePath(data.poster_path, "w500")} />
-      <TitleWrap>{data.title}</TitleWrap>
+      <TitleWrap>{data.name}</TitleWrap>
     </Wrapper>
   );
 }
-export default ContentCard;
+export default TvCard;
