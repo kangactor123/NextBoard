@@ -42,8 +42,10 @@ const Navbar = () => {
       <Link href="/movie">
         <Tab isActive={router.pathname === "/movie" ? true : false}>영화</Tab>
       </Link>
-      <Link href="/tv">
-        <Tab isActive={router.pathname === "/tv" ? true : false}>시리즈</Tab>
+      <Link href="/community">
+        <Tab isActive={router.pathname === "/community" ? true : false}>
+          커뮤니티
+        </Tab>
       </Link>
       <div>
         <Logo onClick={goHome} src="/resource/img/logo.png" alt="로고" />
@@ -53,10 +55,8 @@ const Navbar = () => {
           컨텐츠
         </Tab>
       </Link>
-      <Link href="/community">
-        <Tab isActive={router.pathname === "/community" ? true : false}>
-          커뮤니티
-        </Tab>
+      <Link href="/tv">
+        <Tab isActive={router.pathname === "/tv" ? true : false}>시리즈</Tab>
       </Link>
     </Wrapper>
   );

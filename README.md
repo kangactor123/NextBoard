@@ -14,6 +14,8 @@
 - Recoil.js (상태관리)
 - React-Query (비동기 처리)
 - Styled-Components (CSS in JS)
+- Framer-motion (Animation Library)
+- React-hook-form (form 관리 라이브러리) : community
 
 ### 배포
 
