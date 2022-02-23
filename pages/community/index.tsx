@@ -1,6 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import { NextPage } from "next";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import styled from "styled-components";
 import { Overlay } from "../../components/common/Overlay";
 import Tag from "../../components/common/Tag";
@@ -58,9 +58,9 @@ const PostBtn = styled.button`
 
 const CommunityIndex: NextPage = () => {
   const [modal, setModal] = useState(false);
-  const toggleModal = () => {
+  const toggleModal = useCallback(() => {
     setModal((prev) => !prev);
-  };
+  }, [modal]);
   return (
     <>
       <Wrapper>
