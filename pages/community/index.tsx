@@ -90,7 +90,11 @@ const CommunityIndex: NextPage = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
             >
-              <PostBoard toggleModal={toggleModal} modal={modal} />
+              <PostBoard
+                nowTag={"worker"}
+                toggleModal={toggleModal}
+                modal={modal}
+              />
             </Overlay>
           </>
         )}
